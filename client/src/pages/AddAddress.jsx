@@ -44,6 +44,9 @@ const AddAddress = () => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault()
+     if (!user || !user._id) {
+    return toast.error('User not logged in. Please login to continue.');
+  }
     try {
       const {data}= await axios.post('/api/address/add', {
   ...address,
@@ -63,7 +66,7 @@ const AddAddress = () => {
   }
 
   useEffect(()=>{
-    if(!user){
+    if (!user || !user._id){
       navigate('/cart')
     }
   },[])
