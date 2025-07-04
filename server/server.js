@@ -32,7 +32,7 @@ await connectCloudinary();
 const allowedOrigins = [
   'http://localhost:5173',
   'https://cartgreen.vercel.app',
-  'https://cartgreen-mehrab-siddiques-projects.vercel.app',
+  'hhttps://cartgreen-mehrab-siddiques-projects.vercel.app',
 ];
 
 // Stripe webhook (raw body) – must come BEFORE express.json()
